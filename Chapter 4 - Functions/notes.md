@@ -1,110 +1,96 @@
-# Chapter 4 - Functions, Variable Scope & Recursion
+# Chapter 4 - Advanced Functions, Arguments & Functional Tools
 
 ## 1. Definition
-A **function** is a reusable block of code that performs a specific action and optionally returns a result. A **local variable** is defined inside a function and can only be accessed within that function. A **global variable** is defined outside all functions and is accessible throughout the module. **Recursion** is a technique where a function calls itself to solve smaller sub-problems until reaching a base condition.
+Python functions are versatile first-class objects. Beyond basic declarations, Python supports flexible argument types (**positional, keyword, default, `*args`, `**kwargs`**), **function aliasing** (assigning function references to new names), and **nested functions** (inner functions inside outer scopes). A **ternary operator** evaluates conditions inline. **Lambda functions** are concise, single-expression anonymous functions, often used with higher-order functions like **`filter()`** to extract matching elements from an iterable.
 
 ## 2. Syntax
 ```python
-# Global variable
-global_var = 100
+# 1. Types of Arguments
+def func(pos, default_val=10, *args, **kwargs):
+    pass
 
-def my_function():
-    # Local variable
-    local_var = 20
-    
-    # Modifying a global variable
-    global global_var
-    global_var += 50
-    return local_var
+# 2. Function Aliasing
+new_alias = original_function
 
-# Recursive function
-def recursive_func(n):
-    if n <= 1:              # Base case
-        return 1
-    return n * recursive_func(n - 1)  # Recursive case
+# 3. Nested Functions
+def outer():
+    def inner():
+        return "Inside helper"
+    return inner()
+
+# 4. Ternary Operator
+result = value_if_true if condition else value_if_false
+
+# 5. Lambda Function
+lambda arguments: single_expression
+
+# 6. filter()
+filtered_list = list(filter(lambda x: condition, iterable))
 ```
 
 ## 3. Example
 ```python
-import math
+# 1. Types of arguments
+def calculate_bill(base_price, tax_rate=0.05, *discounts, **customer):
+    total = base_price + (base_price * tax_rate) - sum(discounts)
+    return total
 
-# Global variable
-counter = 10
+# 2. Function Aliasing
+compute = calculate_bill
 
-def process_data(value):
-    # Local variable
-    factor = 2
-    global counter
-    counter += 1
-    return value * factor
+# 3. Nested Function
+def format_receipt(name, amount):
+    def add_currency():
+        return f"Rs. {amount:.2f}"
+    return f"Customer: {name} | Total: {add_currency()}"
 
-# Recursive factorial
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
+# 4. Ternary Operator & Lambda
+check_status = lambda score: "Pass" if score >= 40 else "Fail"
 
-print("Result:", process_data(5))
-print("Updated Global counter:", counter)
-print("Factorial of 5:", factorial(5))
-print("Built-in math.factorial(5):", math.factorial(5))
+# 5. filter()
+marks_list = [28, 55, 38, 72, 90, 42]
+passed_marks = list(filter(lambda m: m >= 40, marks_list))
+
+print("Bill with Alias   :", compute(1000, 0.05, 50, 20))
+print("Formatted Receipt :", format_receipt("Alok", 980))
+print("Status of 45      :", check_status(45))
+print("Passed Marks List :", passed_marks)
 ```
 
 ## 4. Output
 ```text
-Result: 10
-Updated Global counter: 11
-Factorial of 5: 120
-Built-in math.factorial(5): 120
+Bill with Alias   : 980.0
+Formatted Receipt : Customer: Alok | Total: Rs. 980.00
+Status of 45      : Pass
+Passed Marks List : [55, 72, 90, 42]
 ```
 
 ## 5. Explanation
-### Local vs Global Scope
-- **Local Scope:** Variables created inside a function (like `factor`) are stored in the function's local namespace. When the function finishes execution, these variables are destroyed from memory.
-- **Global Scope:** Variables declared outside functions (like `counter`) live at module level and are accessible anywhere in the script for reading.
-- **The `global` Keyword:** In Python, assigning a value inside a function automatically creates a local variable by default. To modify a module-level variable inside a function, you must declare it with `global variable_name`.
-
-### Understanding the Recursive Factorial Implementation
-1. **Base Case (`n == 0` or `n == 1`)**:
-   - The condition that stops recursion. It prevents infinite calls and stack overflow.
-   - Returns `1` immediately.
-2. **Recursive Case (`n * factorial(n - 1)`)**:
-   - Reduces the problem by calling `factorial` with `n - 1`.
-3. **Function Call Stack (Winding & Unwinding)**:
-   - Call frames are pushed: `5 * fact(4) -> 4 * fact(3) -> 3 * fact(2) -> 2 * fact(1)`.
-   - Base case returns `1`, and frames unwind: `1 -> 2 -> 6 -> 24 -> 120`.
-4. **Recursive vs `math.factorial()`**:
-   - Our recursive function demonstrates call stack mechanics and recursion theory.
-   - `math.factorial()` is written in C and avoids call stack overhead, making it faster and free from Python recursion limits.
+- **Types of Arguments:** Positional arguments map in sequence; keyword arguments map by parameter name; default arguments provide fallbacks; `*args` packs extra positional arguments into a `tuple`; `**kwargs` packs extra keyword arguments into a `dict`.
+- **Function Aliasing:** Functions in Python are objects. Writing `compute = calculate_bill` copies the function reference without executing it. Both names point to the same memory address (`compute is calculate_bill` is `True`).
+- **Nested Functions:** `add_currency()` exists inside `format_receipt()` and cannot be accessed from global scope, creating encapsulation.
+- **Ternary Operator:** `value_if_true if condition else value_if_false` evaluates compactly in a single expression line.
+- **Lambda & `filter()`:** `lambda m: m >= 40` evaluates each item in `marks_list`. `filter()` passes items that evaluate to `True` into an iterator, which is cast into a Python `list`.
 
 ## 6. Important Points
-- **LEGB Rule:** Python searches for variable names in order: **L**ocal -> **E**nclosing -> **G**lobal -> **B**uilt-in.
-- Accessing a local variable outside its function raises a `NameError`.
-- Reading a global variable inside a function does NOT require the `global` keyword; modifying it DOES.
-- Best practice: Prefer returning values and passing parameters over modifying global state directly.
-- Every recursive function must have at least one reachable base case to prevent a `RecursionError`.
+- Default arguments must always be placed **after** non-default arguments (`def f(a, b=5):` is valid; `def f(a=5, b):` causes `SyntaxError`).
+- When aliasing a function, never include parentheses `()` (e.g., `alias = func`, not `alias = func()`).
+- Lambda functions can only contain a single expression—no statements, loops, or multiple assignments.
+- `filter(func, iterable)` returns a lazy iterator; use `list(filter(...))` to view and store the results.
+- Nested functions can read variables from their enclosing outer function scope (LEGB rule).
 
 ## 7. Common Mistakes
-- **`UnboundLocalError`:** Occurs when you read and assign a global variable inside a function without declaring `global` first:
+- **SyntaxError in Default Arguments:** Placing non-default argument after a default argument:
   ```python
-  count = 0
-  def increment():
-      count += 1  # Raises UnboundLocalError! Fix: add 'global count'
+  def greet(message="Hi", name):  # SyntaxError: non-default argument follows default argument
   ```
-- **Accessing Local Variable Outside:** Trying to print a variable declared inside a function from global scope raises `NameError`.
-- **Variable Shadowing Confusion:** Creating a local variable with the same name as a global variable overrides access to the global variable inside that function without warning.
-- **Missing Base Case:** A recursive function without a base case runs until hitting Python's recursion limit (default 1000).
+- **Calling Instead of Aliasing:** Writing `alias = func()` stores the return value of `func()`, not the function object itself.
+- **Iterating Filter Once:** Trying to iterate over a raw `filter` object twice; it exhausts after one pass unless converted to `list`.
+- **Using Return in Lambda:** Writing `lambda x: return x * 2` causes a `SyntaxError` (`lambda` automatically returns the expression result).
 
 ## 8. Practice Questions
-1. What will be the output of this code?
-   ```python
-   x = 5
-   def change():
-       x = 10
-   change()
-   print(x)
-   ```
-2. Write a function with a local variable `pi = 3.14` to calculate the area of a circle.
-3. How can you modify a global variable `score = 0` inside a function `update_score(points)`? Write the code.
-4. What is the difference between reading a global variable and modifying a global variable inside a function?
-5. What error occurs if you try to print a local variable outside its function? Explain why.
+1. Write a function `greet_user(name, title="Mr.")` that uses default and keyword arguments.
+2. Create an alias `quadruple` for a function `multiply_by_four(n)` and verify both have the same `id()`.
+3. Write a nested function where the inner function squares a number and the outer function adds two squared numbers.
+4. Use a ternary operator inside a lambda function to return `"Adult"` if age >= 18 else `"Minor"`.
+5. Given `numbers = [15, 22, 33, 40, 55, 60]`, use `filter()` with a lambda to extract all numbers divisible by 5.

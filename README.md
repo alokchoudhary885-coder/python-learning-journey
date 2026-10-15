@@ -52,7 +52,12 @@ python-learning-journey/
     ├── README.md
     ├── notes.md
     ├── practice.py
+    ├── types_of_arguments.py
     ├── variable_scope.py
+    ├── function_aliasing.py
+    ├── nested_functions.py
+    ├── ternary_operator.py
+    ├── lambda_functions.py
     ├── recursion.py
     └── assignment.py
 ```
@@ -66,7 +71,7 @@ python-learning-journey/
 - [x] **Chapter 1: Python Fundamentals** (Variables, comments, indentation, statements)
 - [x] **Chapter 2: Data Types & Operators** (Data types, type casting, arithmetic, logical operators)
 - [ ] **Chapter 3: Control Flow** (Conditionals, loops, loop control statements) — *Up Next*
-- [x] **Chapter 4: Functions, Scope & Recursion** (Functions, arguments, **kwargs, local/global scope, recursion, math module)
+- [x] **Chapter 4: Functions & Advanced Concepts** (Arguments, scope, aliasing, nested functions, ternary, lambda, filter, recursion)
 - [ ] **Chapter 5: Data Structures / Collections** (Lists, Tuples, Sets, Dictionaries)
 - [ ] **Chapter 6: Object-Oriented Programming (OOP)**
 - [ ] **Chapter 7: File Handling & Exception Handling**
