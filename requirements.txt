@@ -1,0 +1,3 @@
+# Python Learning Journey - Dependencies
+# Currently studying core Python (built-in standard library only).
+# External dependencies (numpy, pandas, matplotlib, etc.) will be added in later chapters.

@@ -1,60 +1,84 @@
 # Chapter 2 - Data Types & Operators in Python
 
-## 1. Data Types in Python
+## 1. Definition
+Data types specify the kind of value a variable can store, such as numbers, text, or truth values. Operators are special symbols in Python used to perform computations, comparisons, and logical evaluations on values and variables.
 
-Python has several built-in data types. They define the type of value a variable holds.
-
-| Type | Example | Description |
-|---|---|---|
-| `int` | `x = 10` | Whole numbers |
-| `float` | `y = 3.14` | Numbers with decimals |
-| `str` | `name = "Alok"` | Sequence of characters |
-| `bool` | `flag = True` | `True` or `False` |
-
-### Checking Data Type
-
-Use the `type()` function to check the data type of a variable.
-
+## 2. Syntax
 ```python
-x = 10
+# Data Types
+age = 21            # int
+price = 99.50       # float
+name = "Alok"       # str
+is_active = True    # bool
 
-print(type(x))
+# Checking Type
+type(variable_name)
 
+# Type Conversion
+converted_value = int("25")
 
-notes.md
+# Operators
+sum_result = a + b      # Arithmetic
+is_equal = (a == b)     # Comparison
+both_true = p and q     # Logical
+```
 
-1. Data Types
-2. Integer
-3. Float
-4. String
-5. Boolean
-6. Complex
-7. type()
-8. Keywords
-9. Variables
-10. print()
-11. input()
-12. Sum Program
-13. Average
-14. Type Conversion
-15. Implicit Conversion
-16. Explicit Conversion
-17. int()
-18. float()
-19. str()
-20. bool()
-21. Arithmetic Operators
-22. Comparison Operators
-23. Logical Operators
-24. Assignment Operators
-25. Operator Precedence
-26. Temperature Converter
-27. Bill Split Calculator
-28. Common Mistakes
-29. Practice Questions
-30. Assignment
-31. Output Questions
-32. Viva Questions
-33. Quick Revision
-34. Checklist
-35. Final Summary
+## 3. Example
+```python
+# Variables with different data types
+item_price = 120.5
+quantity = 3
+is_member = True
+
+# Calculation using arithmetic operators
+subtotal = item_price * quantity
+
+# Type conversion
+discount_percent = int("10")
+discount = (subtotal * discount_percent) / 100
+final_bill = subtotal - discount
+
+# Logical comparison
+eligible_for_gift = final_bill > 300 and is_member
+
+print("Subtotal:", subtotal)
+print("Discount:", discount)
+print("Final Bill:", final_bill)
+print("Eligible for Gift:", eligible_for_gift)
+```
+
+## 4. Output
+```text
+Subtotal: 361.5
+Discount: 36.15
+Final Bill: 325.35
+Eligible for Gift: True
+```
+
+## 5. Explanation
+- `item_price` is a `float`, `quantity` is an `int`, and `is_member` is a `bool`.
+- `int("10")` explicitly converts the string `"10"` into the integer `10`.
+- Operators `*`, `/`, `-` perform standard arithmetic calculations.
+- `final_bill > 300 and is_member` uses a comparison operator (`>`) and a logical operator (`and`) to evaluate to `True`.
+
+## 6. Important Points
+- Python has 4 primary scalar data types: `int`, `float`, `str`, `bool`.
+- `type()` returns the data type of any object.
+- Division `/` always returns a `float` in Python 3 (e.g., `4 / 2` gives `2.0`).
+- Floor division `//` discards the fractional part and returns the quotient.
+- Modulus `%` returns the remainder of division.
+- Exponentiation is written as `**` (e.g., `2 ** 3` is `8`).
+- In Python, implicit conversion automatically converts a narrower type (like `int`) to a wider type (like `float`) during operations.
+
+## 7. Common Mistakes
+- Trying to concatenate a string and an integer directly (e.g., `"Age: " + 21` raises a `TypeError`; use `str(21)` or comma in `print`).
+- Confusing assignment `=` with equality comparison `==`.
+- Assuming integer division truncates to integer type (e.g., `5 // 2.0` produces `2.0`, not `2`).
+- Converting invalid strings to numbers (e.g., `int("abc")` raises `ValueError`).
+
+## 8. Practice Questions
+1. Predict the output and type of `5 + 2.0` and `10 // 3`.
+2. Convert a user input string `"45"` into an integer, add `5`, and print the result.
+3. Write a program to calculate simple interest: `SI = (P * R * T) / 100`.
+4. What is the difference between `/` and `//` in Python? Give examples.
+5. Given `x = 10` and `y = 20`, swap their values without using a temporary variable.
