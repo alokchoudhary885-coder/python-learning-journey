@@ -1,6 +1,6 @@
-# Chapter 4 - Functions, Scope, Arguments & Functional Tools
+# Chapter 4 - Functions, Functional Tools & Python Modules
 
-This chapter provides a comprehensive exploration of Python functions: argument types, variable scope, function aliasing, nested functions, ternary expressions, lambda functions, and higher-order tools like `filter()`, along with recursion.
+This chapter provides a comprehensive exploration of Python functions, functional programming tools (`map`, `filter`, `reduce`), variable scope, and Python modules and the import system.
 
 ## Topics Covered
 - Function definition (`def`) and return statements
@@ -9,30 +9,59 @@ This chapter provides a comprehensive exploration of Python functions: argument 
 - **Function Aliasing:** Treating functions as first-class objects
 - **Nested Functions:** Inner helper functions and scope encapsulation
 - **Ternary Operator:** Conditional expressions (`x if condition else y`)
-- **Anonymous Functions:** Single-line `lambda` expressions
-- **Higher-Order Built-in `filter()`:** Filtering iterables with predicate functions
-- **Recursion:** Base cases, recursive cases, call stack unwinding, and comparison with `math.factorial()`
+- **Anonymous Functions:** Single-line `lambda` expressions & why lambda is not used everywhere
+- **Functional Tools:**
+  - `map()`: Transforming collections with functions and lambdas
+  - `filter()`: Extracting elements matching criteria
+  - `reduce()`: Cumulative aggregation using `functools`
+- **Recursion:** Base cases, recursive cases, and call stack unwinding
+- **Python Modules & Imports:**
+  - Defining custom modules (`my_module.py`) and importing them (`main.py`)
+  - Built-in vs standard library vs third-party modules (`math`, `random`)
+  - Module aliasing with `as` (`module_aliasing.py`)
+  - The actual Python import hierarchy: `sys.modules`, `sys.meta_path`, `sys.path`, finders, loaders, and preventing module shadowing (`import_hierarchy_demo.py`)
 
 ## Files in this Chapter
+
+### Runnable Practice & Demonstration Scripts
 - `practice.py`: Basic function declarations, arithmetic operations, and keyword argument handling.
 - `types_of_arguments.py`: Comprehensive guide to positional, keyword, default, `*args`, and `**kwargs`.
 - `variable_scope.py`: Local vs global variables, namespace behavior, and `global` keyword.
 - `function_aliasing.py`: Aliasing function references, memory identity, and deleting original references.
 - `nested_functions.py`: Inner helper functions and returning functions.
 - `ternary_operator.py`: Inline conditional expressions and compact functions.
-- `lambda_functions.py`: Anonymous functions with lambda, ternary operators in lambda, and `filter()`.
-- `recursion.py`: Clean recursive factorial implementation with formula expansion and `math.factorial` comparison.
-- `assignment.py`: Six progressive practical assignments with verified solutions.
-- `notes.md`: Quick-revision notes following the 8-section layout with questions and common errors.
+- `lambda_functions.py`: Anonymous functions with lambda, ternary operators, and `filter()`.
+- `map_function.py`: Comprehensive `map()` demonstrations, multiple iterables, and 5 solved exercises.
+- `reduce_function.py`: `reduce()` accumulator mechanics, initializer usage, and map/filter/reduce comparison.
+- `lambda_vs_def.py`: Side-by-side comparison of `def` vs `lambda`, PEP 8 guidelines, and debugging stack traces.
+- `my_module.py`: Sample user-defined module with functions and `if __name__ == "__main__":` guard.
+- `main.py`: Importing and using functions from `my_module.py`.
+- `math_module_demo.py`: Standard library `math` module demonstration (constants, rounding, powers, GCD).
+- `random_module_demo.py`: Standard library `random` module demo (randint, choice, sample, shuffle, seeds).
+- `import_hierarchy_demo.py`: Step-by-step inspection of `sys.modules`, `sys.meta_path`, `sys.path`, and `__file__`.
+- `module_aliasing.py`: Aliasing modules and functions with `as`, industry conventions, and best practices.
+- `recursion.py`: Clean recursive factorial implementation with formula expansion.
+- `assignment.py`: Nine progressive practical assignments covering all concepts with solutions.
+
+### Topic-Specific Study & Revision Notes
+- `notes.md`: Chapter-wide synthesis notes and index.
+- `map_function.md`: 10-section guide on `map()` with Q&A.
+- `reduce_function.md`: 10-section guide on `reduce()` with Q&A.
+- `why_not_lambda_everywhere.md`: 10-section analysis of `lambda` vs `def`.
+- `modules_in_python.md`: 10-section guide on predefined and custom modules.
+- `python_import_hierarchy.md`: 10-section guide on import mechanics and shadowing risks.
+- `module_aliasing.md`: 10-section guide on `import ... as ...` conventions.
 
 ## How to Run
+Run any script directly from this folder:
 ```bash
-python types_of_arguments.py
-python variable_scope.py
-python function_aliasing.py
-python nested_functions.py
-python ternary_operator.py
-python lambda_functions.py
-python recursion.py
+python map_function.py
+python reduce_function.py
+python lambda_vs_def.py
+python main.py
+python math_module_demo.py
+python random_module_demo.py
+python import_hierarchy_demo.py
+python module_aliasing.py
 python assignment.py
 ```

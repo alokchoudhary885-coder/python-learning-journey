@@ -51,6 +51,12 @@ python-learning-journey/
 └── Chapter 4 - Functions/
     ├── README.md
     ├── notes.md
+    ├── map_function.md
+    ├── reduce_function.md
+    ├── why_not_lambda_everywhere.md
+    ├── modules_in_python.md
+    ├── python_import_hierarchy.md
+    ├── module_aliasing.md
     ├── practice.py
     ├── types_of_arguments.py
     ├── variable_scope.py
@@ -58,6 +64,15 @@ python-learning-journey/
     ├── nested_functions.py
     ├── ternary_operator.py
     ├── lambda_functions.py
+    ├── map_function.py
+    ├── reduce_function.py
+    ├── lambda_vs_def.py
+    ├── my_module.py
+    ├── main.py
+    ├── math_module_demo.py
+    ├── random_module_demo.py
+    ├── import_hierarchy_demo.py
+    ├── module_aliasing.py
     ├── recursion.py
     └── assignment.py
 ```
@@ -71,7 +86,7 @@ python-learning-journey/
 - [x] **Chapter 1: Python Fundamentals** (Variables, comments, indentation, statements)
 - [x] **Chapter 2: Data Types & Operators** (Data types, type casting, arithmetic, logical operators)
 - [ ] **Chapter 3: Control Flow** (Conditionals, loops, loop control statements) — *Up Next*
-- [x] **Chapter 4: Functions & Advanced Concepts** (Arguments, scope, aliasing, nested functions, ternary, lambda, filter, recursion)
+- [x] **Chapter 4: Functions, Functional Tools & Modules** (Arguments, scope, lambda, map, reduce, recursion, custom & standard modules, import hierarchy, aliasing)
 - [ ] **Chapter 5: Data Structures / Collections** (Lists, Tuples, Sets, Dictionaries)
 - [ ] **Chapter 6: Object-Oriented Programming (OOP)**
 - [ ] **Chapter 7: File Handling & Exception Handling**

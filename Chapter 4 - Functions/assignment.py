@@ -1,11 +1,17 @@
-# Chapter 4 - Assignment: Functions, Recursion, Scope & Functional Tools
-# =======================================================================
+# Chapter 4 - Assignment: Functions, Recursion, Scope, Functional Tools & Modules
+# =================================================================================
 # Task 1: Write a function `calculate_power(base, exp)` that computes base^exp.
 # Task 2: Write a function `calculate_average(*numbers)` that accepts variable numbers and returns average.
 # Task 3: Write a recursive function `sum_of_digits(n)` that returns the sum of digits of a number.
 # Task 4: Write a visitor counter using a global variable `visitor_count` and a function `register_visitor()`.
 # Task 5: Demonstrate function aliasing and a nested helper function for currency formatting.
 # Task 6: Use a lambda function with ternary operator and `filter()` to filter passing marks (>= 40).
+# Task 7: Use `map()` to calculate 18% GST on a shopping cart of item prices.
+# Task 8: Use `reduce()` from `functools` to compute the combined total and maximum value of a transaction list.
+# Task 9: Import and execute a function from user-defined `my_module`.
+
+from functools import reduce
+import my_module
 
 # --- Solution 1: Power Function ---
 def calculate_power(base, exp):
@@ -66,6 +72,17 @@ generate_bill = invoice_generator
 grade_label = lambda m: "Passed" if m >= 40 else "Failed"
 
 
+# --- Solution 7: map() with GST Calculation ---
+def add_gst(price):
+    """Adds 18% GST and rounds to 2 decimal places."""
+    return round(price * 1.18, 2)
+
+
+# --- Solution 8: reduce() for Aggregation ---
+def find_max(a, b):
+    return a if a > b else b
+
+
 if __name__ == "__main__":
     print("--- Task 1: Power Calculation ---")
     print("2^5 =", calculate_power(2, 5))
@@ -97,3 +114,21 @@ if __name__ == "__main__":
     print("Passed Scores (>= 40):", passed_scores)
     print("Score 38 status:", grade_label(38))
     print("Score 70 status:", grade_label(70))
+
+    print("\n--- Task 7: map() for Shopping Cart with GST ---")
+    cart_prices = [150.0, 300.0, 450.0, 1200.0]
+    prices_with_gst = list(map(add_gst, cart_prices))
+    print("Cart Base Prices :", cart_prices)
+    print("Prices with GST  :", prices_with_gst)
+
+    print("\n--- Task 8: reduce() for Total and Maximum ---")
+    txns = [120, 450, 90, 850, 340]
+    total_txns = reduce(lambda acc, t: acc + t, txns)
+    max_txn = reduce(find_max, txns)
+    print("Transactions:", txns)
+    print("Total Sum   :", total_txns)
+    print("Highest Txn :", max_txn)
+
+    print("\n--- Task 9: Using User-Defined Module ---")
+    print(my_module.greet("Alok"))
+    print("Circle area with radius 10 from my_module:", my_module.calculate_circle_area(10))

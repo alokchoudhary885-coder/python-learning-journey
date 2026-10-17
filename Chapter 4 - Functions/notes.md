@@ -1,96 +1,91 @@
-# Chapter 4 - Advanced Functions, Arguments & Functional Tools
+# Chapter 4 - Functions, Functional Tools & Python Modules
 
 ## 1. Definition
-Python functions are versatile first-class objects. Beyond basic declarations, Python supports flexible argument types (**positional, keyword, default, `*args`, `**kwargs`**), **function aliasing** (assigning function references to new names), and **nested functions** (inner functions inside outer scopes). A **ternary operator** evaluates conditions inline. **Lambda functions** are concise, single-expression anonymous functions, often used with higher-order functions like **`filter()`** to extract matching elements from an iterable.
+Python functions are versatile first-class objects that support flexible parameter passing (**positional, keyword, default, `*args`, `**kwargs`**), **variable scope** (local vs global), and **recursion**. Python provides functional tools like **`map()`** for transforming collections, **`filter()`** for conditional extraction, and **`reduce()`** for cumulative aggregation. Code is organized into reusable files called **modules**, which Python resolves and loads using a structured import hierarchy.
 
 ## 2. Syntax
 ```python
-# 1. Types of Arguments
-def func(pos, default_val=10, *args, **kwargs):
-    pass
+# 1. Functions & Arguments
+def calculate(base, rate=0.05, *discounts, **metadata):
+    return (base * (1 + rate)) - sum(discounts)
 
-# 2. Function Aliasing
-new_alias = original_function
+# 2. Functional Tools
+mapped_data = list(map(lambda x: x * 2, [1, 2, 3]))
+filtered_data = list(filter(lambda x: x > 2, [1, 2, 3, 4]))
 
-# 3. Nested Functions
-def outer():
-    def inner():
-        return "Inside helper"
-    return inner()
+from functools import reduce
+reduced_val = reduce(lambda acc, x: acc + x, [1, 2, 3, 4])
 
-# 4. Ternary Operator
-result = value_if_true if condition else value_if_false
-
-# 5. Lambda Function
-lambda arguments: single_expression
-
-# 6. filter()
-filtered_list = list(filter(lambda x: condition, iterable))
+# 3. Modules & Aliasing
+import math as m
+from my_module import calculate_circle_area
 ```
 
 ## 3. Example
 ```python
-# 1. Types of arguments
-def calculate_bill(base_price, tax_rate=0.05, *discounts, **customer):
-    total = base_price + (base_price * tax_rate) - sum(discounts)
-    return total
+from functools import reduce
+import math as m
 
-# 2. Function Aliasing
-compute = calculate_bill
+# Functional pipeline:
+# Step 1: Filter even numbers
+# Step 2: Double them using map()
+# Step 3: Sum them using reduce()
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 
-# 3. Nested Function
-def format_receipt(name, amount):
-    def add_currency():
-        return f"Rs. {amount:.2f}"
-    return f"Customer: {name} | Total: {add_currency()}"
+even_nums = list(filter(lambda x: x % 2 == 0, numbers))
+doubled_evens = list(map(lambda x: x * 2, even_nums))
+total_sum = reduce(lambda acc, x: acc + x, doubled_evens)
 
-# 4. Ternary Operator & Lambda
-check_status = lambda score: "Pass" if score >= 40 else "Fail"
-
-# 5. filter()
-marks_list = [28, 55, 38, 72, 90, 42]
-passed_marks = list(filter(lambda m: m >= 40, marks_list))
-
-print("Bill with Alias   :", compute(1000, 0.05, 50, 20))
-print("Formatted Receipt :", format_receipt("Alok", 980))
-print("Status of 45      :", check_status(45))
-print("Passed Marks List :", passed_marks)
+print("Original Numbers :", numbers)
+print("Even Numbers     :", even_nums)
+print("Doubled Evens    :", doubled_evens)
+print("Total Sum        :", total_sum)
+print("Square root of sum via alias (m.sqrt):", m.sqrt(total_sum))
 ```
 
 ## 4. Output
 ```text
-Bill with Alias   : 980.0
-Formatted Receipt : Customer: Alok | Total: Rs. 980.00
-Status of 45      : Pass
-Passed Marks List : [55, 72, 90, 42]
+Original Numbers : [1, 2, 3, 4, 5, 6, 7, 8]
+Even Numbers     : [2, 4, 6, 8]
+Doubled Evens    : [4, 8, 12, 16]
+Total Sum        : 40
+Square root of sum via alias (m.sqrt): 6.324555320336759
 ```
 
 ## 5. Explanation
-- **Types of Arguments:** Positional arguments map in sequence; keyword arguments map by parameter name; default arguments provide fallbacks; `*args` packs extra positional arguments into a `tuple`; `**kwargs` packs extra keyword arguments into a `dict`.
-- **Function Aliasing:** Functions in Python are objects. Writing `compute = calculate_bill` copies the function reference without executing it. Both names point to the same memory address (`compute is calculate_bill` is `True`).
-- **Nested Functions:** `add_currency()` exists inside `format_receipt()` and cannot be accessed from global scope, creating encapsulation.
-- **Ternary Operator:** `value_if_true if condition else value_if_false` evaluates compactly in a single expression line.
-- **Lambda & `filter()`:** `lambda m: m >= 40` evaluates each item in `marks_list`. `filter()` passes items that evaluate to `True` into an iterator, which is cast into a Python `list`.
+- **`filter()`** checks each number against `x % 2 == 0` and keeps only `[2, 4, 6, 8]`.
+- **`map()`** transforms each filtered number by multiplying by 2, yielding `[4, 8, 12, 16]`.
+- **`reduce()`** aggregates the list elements sequentially: $((4 + 8) + 12) + 16 = 40$.
+- **`import math as m`** loads the standard math module and binds it to the short alias `m`.
 
 ## 6. Important Points
-- Default arguments must always be placed **after** non-default arguments (`def f(a, b=5):` is valid; `def f(a=5, b):` causes `SyntaxError`).
-- When aliasing a function, never include parentheses `()` (e.g., `alias = func`, not `alias = func()`).
-- Lambda functions can only contain a single expression—no statements, loops, or multiple assignments.
-- `filter(func, iterable)` returns a lazy iterator; use `list(filter(...))` to view and store the results.
-- Nested functions can read variables from their enclosing outer function scope (LEGB rule).
+- **Functional Tools:** `map()` and `filter()` return lazy iterators; always cast to `list()` to inspect or reuse. `reduce()` returns a scalar value and requires `from functools import reduce`.
+- **Lambda Limitations:** Lambdas are strictly single-expression; use `def` for multi-line logic, error handling, or when functions need documentation.
+- **Import Hierarchy:** Python checks `sys.modules` cache first, then `sys.meta_path` finders, and uses `sys.path` to locate `.py` files.
+- **Entry Guard:** Always protect top-level runnable code in modules with `if __name__ == "__main__":`.
 
 ## 7. Common Mistakes
-- **SyntaxError in Default Arguments:** Placing non-default argument after a default argument:
-  ```python
-  def greet(message="Hi", name):  # SyntaxError: non-default argument follows default argument
-  ```
-- **Calling Instead of Aliasing:** Writing `alias = func()` stores the return value of `func()`, not the function object itself.
-- **Iterating Filter Once:** Trying to iterate over a raw `filter` object twice; it exhausts after one pass unless converted to `list`.
-- **Using Return in Lambda:** Writing `lambda x: return x * 2` causes a `SyntaxError` (`lambda` automatically returns the expression result).
+- **Shadowing Standard Library:** Naming local files `math.py`, `random.py`, or `test.py` causes Python to import the local file instead of the standard library.
+- **Calling Instead of Passing in `map()`/`filter()`:** Writing `map(func(), items)` instead of `map(func, items)`.
+- **Wildcard Imports (`from module import *`):** Pollutes the namespace and leads to accidental variable shadowing.
+- **Empty Iterable in `reduce()`:** Calling `reduce(func, [])` without an initializer raises `TypeError`.
 
 ## 8. Practice Questions
-1. Write a function `greet_user(name, title="Mr.")` that uses default and keyword arguments.
-2. Create an alias `quadruple` for a function `multiply_by_four(n)` and verify both have the same `id()`.
-3. Write a nested function where the inner function squares a number and the outer function adds two squared numbers.
-4. Use a ternary operator inside a lambda function to return `"Adult"` if age >= 18 else `"Minor"`.
-5. Given `numbers = [15, 22, 33, 40, 55, 60]`, use `filter()` with a lambda to extract all numbers divisible by 5.
+1. Use `map()` to convert a list of strings `["10", "20", "30"]` to integers.
+2. Given a list of numbers `[5, 12, 18, 25, 30]`, use `filter()` to find numbers divisible by both 2 and 3.
+3. Compute the product of numbers from 1 to 5 using `reduce()`.
+4. What happens when a script named `random.py` tries to execute `import random`? Explain why.
+5. Create a module with a function `is_prime(n)` and demonstrate importing it using an alias.
+
+---
+
+## 📑 Dedicated Topic Notes Index
+
+For in-depth revision notes, detailed step-by-step traces, common pitfalls, and 5+ solved practice questions for each specific topic, refer to:
+
+- [map() Function Notes](file:///c:/python-learning-journey/Chapter%204%20-%20Functions/map_function.md)
+- [reduce() Function Notes](file:///c:/python-learning-journey/Chapter%204%20-%20Functions/reduce_function.md)
+- [Why Lambda Is Not Used Everywhere Notes](file:///c:/python-learning-journey/Chapter%204%20-%20Functions/why_not_lambda_everywhere.md)
+- [Python Modules & Structure Notes](file:///c:/python-learning-journey/Chapter%204%20-%20Functions/modules_in_python.md)
+- [The Actual Python Import Hierarchy Notes](file:///c:/python-learning-journey/Chapter%204%20-%20Functions/python_import_hierarchy.md)
+- [Module Aliasing Notes](file:///c:/python-learning-journey/Chapter%204%20-%20Functions/module_aliasing.md)
