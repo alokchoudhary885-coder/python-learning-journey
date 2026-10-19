@@ -43,6 +43,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `special_variables.py`: Exploration of `__name__`, `__file__`, `__doc__`, `__all__`, and `__dict__`.
 - `datetime_module_demo.py`: Standard library `datetime` module demo (now, strftime, strptime, timestamps).
 - `datetime_classes_demo.py`: Deep dive into `date`, `time`, `datetime`, `timedelta`, and `timezone` classes.
+- `calendar_module_demo.py`: Standard library `calendar` module demo (month grids, isleap, weekday, monthrange).
 - `arithmetic_module.py`: Pure business calculation logic module.
 - `formatting_module.py`: Text, header, and currency formatting utility module.
 - `multiple_modules_demo.py`: Orchestrating calculations and formatting across multiple modules.
@@ -59,6 +60,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `special_variables.md`: 10-section guide on Python special (dunder) variables.
 - `datetime_module.md`: 10-section guide on datetime formatting (strftime/strptime) and timestamps.
 - `datetime_classes.md`: 10-section guide on date, time, datetime, timedelta, and timezone classes.
+- `calendar_module.md`: 10-section guide on calendar generation, leap years, and weekday indexing.
 - `python_import_hierarchy.md`: 10-section guide on import mechanics and shadowing risks.
 - `module_aliasing.md`: 10-section guide on `import ... as ...` conventions.
 
