@@ -55,6 +55,7 @@ python-learning-journey/
     ├── reduce_function.md
     ├── why_not_lambda_everywhere.md
     ├── modules_in_python.md
+    ├── multiple_modules.md
     ├── python_import_hierarchy.md
     ├── module_aliasing.md
     ├── practice.py
@@ -73,6 +74,9 @@ python-learning-journey/
     ├── random_module_demo.py
     ├── import_hierarchy_demo.py
     ├── module_aliasing.py
+    ├── arithmetic_module.py
+    ├── formatting_module.py
+    ├── multiple_modules_demo.py
     ├── recursion.py
     └── assignment.py
 ```

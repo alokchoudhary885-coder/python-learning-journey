@@ -40,6 +40,9 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `random_module_demo.py`: Standard library `random` module demo (randint, choice, sample, shuffle, seeds).
 - `import_hierarchy_demo.py`: Step-by-step inspection of `sys.modules`, `sys.meta_path`, `sys.path`, and `__file__`.
 - `module_aliasing.py`: Aliasing modules and functions with `as`, industry conventions, and best practices.
+- `arithmetic_module.py`: Pure business calculation logic module.
+- `formatting_module.py`: Text, header, and currency formatting utility module.
+- `multiple_modules_demo.py`: Orchestrating calculations and formatting across multiple modules.
 - `recursion.py`: Clean recursive factorial implementation with formula expansion.
 - `assignment.py`: Nine progressive practical assignments covering all concepts with solutions.
 
@@ -49,6 +52,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `reduce_function.md`: 10-section guide on `reduce()` with Q&A.
 - `why_not_lambda_everywhere.md`: 10-section analysis of `lambda` vs `def`.
 - `modules_in_python.md`: 10-section guide on predefined and custom modules.
+- `multiple_modules.md`: 10-section guide on coordinating multiple modules and avoiding circular imports.
 - `python_import_hierarchy.md`: 10-section guide on import mechanics and shadowing risks.
 - `module_aliasing.md`: 10-section guide on `import ... as ...` conventions.
 
