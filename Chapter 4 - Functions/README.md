@@ -41,6 +41,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `import_hierarchy_demo.py`: Step-by-step inspection of `sys.modules`, `sys.meta_path`, `sys.path`, and `__file__`.
 - `module_aliasing.py`: Aliasing modules and functions with `as`, industry conventions, and best practices.
 - `special_variables.py`: Exploration of `__name__`, `__file__`, `__doc__`, `__all__`, and `__dict__`.
+- `datetime_module_demo.py`: Standard library `datetime` module demo (now, strftime, strptime, timestamps).
 - `arithmetic_module.py`: Pure business calculation logic module.
 - `formatting_module.py`: Text, header, and currency formatting utility module.
 - `multiple_modules_demo.py`: Orchestrating calculations and formatting across multiple modules.
@@ -55,6 +56,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `modules_in_python.md`: 10-section guide on predefined and custom modules.
 - `multiple_modules.md`: 10-section guide on coordinating multiple modules and avoiding circular imports.
 - `special_variables.md`: 10-section guide on Python special (dunder) variables.
+- `datetime_module.md`: 10-section guide on datetime formatting (strftime/strptime) and timestamps.
 - `python_import_hierarchy.md`: 10-section guide on import mechanics and shadowing risks.
 - `module_aliasing.md`: 10-section guide on `import ... as ...` conventions.
 
