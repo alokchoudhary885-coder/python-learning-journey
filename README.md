@@ -56,6 +56,7 @@ python-learning-journey/
     ├── why_not_lambda_everywhere.md
     ├── modules_in_python.md
     ├── multiple_modules.md
+    ├── special_variables.md
     ├── python_import_hierarchy.md
     ├── module_aliasing.md
     ├── practice.py
@@ -77,6 +78,7 @@ python-learning-journey/
     ├── arithmetic_module.py
     ├── formatting_module.py
     ├── multiple_modules_demo.py
+    ├── special_variables.py
     ├── recursion.py
     └── assignment.py
 ```
