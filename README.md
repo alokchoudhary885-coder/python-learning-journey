@@ -89,6 +89,15 @@ python-learning-journey/
     ├── special_variables.py
     ├── recursion.py
     └── assignment.py
+├── Chapter 6 - Object-Oriented Programming (OOP)/
+│   ├── README.md
+│   ├── oop_advantages.md
+│   ├── class_and_objects.py
+│   ├── encapsulation.py
+│   ├── abstraction.py
+│   ├── inheritance.py
+│   ├── polymorphism.py
+│   └── oop_principles.md
 ```
 
 ---
@@ -102,7 +111,7 @@ python-learning-journey/
 - [ ] **Chapter 3: Control Flow** (Conditionals, loops, loop control statements) — *Up Next*
 - [x] **Chapter 4: Functions, Functional Tools & Modules** (Arguments, scope, lambda, map, reduce, recursion, custom & standard modules, import hierarchy, aliasing)
 - [ ] **Chapter 5: Data Structures / Collections** (Lists, Tuples, Sets, Dictionaries)
-- [ ] **Chapter 6: Object-Oriented Programming (OOP)**
+- [x] **Chapter 6: Object-Oriented Programming (OOP)** (Classes, objects, encapsulation, abstraction, inheritance, polymorphism)
 - [ ] **Chapter 7: File Handling & Exception Handling**
 
 ### Data Science & Beyond
