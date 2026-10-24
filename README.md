@@ -55,6 +55,7 @@ python-learning-journey/
     ├── reduce_function.md
     ├── why_not_lambda_everywhere.md
     ├── modules_in_python.md
+    ├── random_module.md
     ├── multiple_modules.md
     ├── special_variables.md
     ├── datetime_module.md
@@ -76,6 +77,7 @@ python-learning-journey/
     ├── main.py
     ├── math_module_demo.py
     ├── random_module_demo.py
+    ├── random_module_functions.py
     ├── datetime_module_demo.py
     ├── datetime_classes_demo.py
     ├── calendar_module_demo.py

@@ -38,6 +38,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `main.py`: Importing and using functions from `my_module.py`.
 - `math_module_demo.py`: Standard library `math` module demonstration (constants, rounding, powers, GCD).
 - `random_module_demo.py`: Standard library `random` module demo (randint, choice, sample, shuffle, seeds).
+- `random_module_functions.py`: Comprehensive guide to random distributions, weighted choices, and practical generators.
 - `import_hierarchy_demo.py`: Step-by-step inspection of `sys.modules`, `sys.meta_path`, `sys.path`, and `__file__`.
 - `module_aliasing.py`: Aliasing modules and functions with `as`, industry conventions, and best practices.
 - `special_variables.py`: Exploration of `__name__`, `__file__`, `__doc__`, `__all__`, and `__dict__`.
@@ -56,6 +57,7 @@ This chapter provides a comprehensive exploration of Python functions, functiona
 - `reduce_function.md`: 10-section guide on `reduce()` with Q&A.
 - `why_not_lambda_everywhere.md`: 10-section analysis of `lambda` vs `def`.
 - `modules_in_python.md`: 10-section guide on predefined and custom modules.
+- `random_module.md`: 10-section guide on random functions, weighted selections, and reproducibility.
 - `multiple_modules.md`: 10-section guide on coordinating multiple modules and avoiding circular imports.
 - `special_variables.md`: 10-section guide on Python special (dunder) variables.
 - `datetime_module.md`: 10-section guide on datetime formatting (strftime/strptime) and timestamps.
