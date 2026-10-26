@@ -1,3 +1,4 @@
 # Python Learning Journey - Dependencies
-# Currently studying core Python (built-in standard library only).
-# External dependencies (numpy, pandas, matplotlib, etc.) will be added in later chapters.
+# Core Python chapters use standard library.
+# Data Science & Machine Learning dependencies:
+numpy>=2.0.0

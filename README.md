@@ -98,6 +98,13 @@ python-learning-journey/
 │   ├── inheritance.py
 │   ├── polymorphism.py
 │   └── oop_principles.md
+└── Chapter 8 - NumPy/
+    ├── README.md
+    ├── numpy_introduction.md
+    ├── numpy_2d_and_shapes.md
+    ├── numpy_basics.py
+    ├── array_creation.py
+    └── two_dimensional_arrays.py
 ```
 
 ---
@@ -115,7 +122,7 @@ python-learning-journey/
 - [ ] **Chapter 7: File Handling & Exception Handling**
 
 ### Data Science & Beyond
-- [ ] **Chapter 8: NumPy**
+- [x] **Chapter 8: NumPy** (Array creation, zeros, ones, arange, linspace, logspace, 2D arrays, shapes)
 - [ ] **Chapter 9: Pandas**
 - [ ] **Chapter 10: Data Visualization** (Matplotlib & Seaborn)
 - [ ] **Chapter 11: SQL Basics**
