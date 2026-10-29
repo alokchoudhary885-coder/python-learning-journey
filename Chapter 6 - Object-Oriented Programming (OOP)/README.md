@@ -17,6 +17,8 @@ This chapter covers the foundations of Object-Oriented Programming (OOP): classe
 - `constructors.md`: 10-section study notes on constructors, types, lifecycle, and Q&A.
 - `oop_methods.py`: Practical demonstration of Instance methods, Class methods (`@classmethod`), and Static methods (`@staticmethod`).
 - `oop_methods.md`: 10-section comprehensive guide comparing the three method types with factory patterns.
+- `variables_in_oop.py`: Instance vs class/static variables, namespaces (`__dict__`), and attribute shadowing.
+- `variables_in_oop.md`: 10-section study notes on memory allocation, resolution order, and mutable variable traps.
 - `class_and_objects.py`: Demonstrates class definitions, constructors, instance/class variables, and methods.
 - `encapsulation.py`: Data hiding, private attributes, name mangling, and properties (`@property`).
 - `abstraction.py`: Designing contracts with `ABC` and enforced abstract methods.

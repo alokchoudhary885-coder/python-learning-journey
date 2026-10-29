@@ -91,6 +91,8 @@ python-learning-journey/
 │   ├── constructors.py
 │   ├── oop_methods.md
 │   ├── oop_methods.py
+│   ├── variables_in_oop.md
+│   ├── variables_in_oop.py
 │   ├── class_and_objects.py
 │   ├── encapsulation.py
 │   ├── abstraction.py
