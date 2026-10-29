@@ -19,6 +19,8 @@ This chapter covers the foundations of Object-Oriented Programming (OOP): classe
 - `oop_methods.md`: 10-section comprehensive guide comparing the three method types with factory patterns.
 - `variables_in_oop.py`: Instance vs class/static variables, namespaces (`__dict__`), and attribute shadowing.
 - `variables_in_oop.md`: 10-section study notes on memory allocation, resolution order, and mutable variable traps.
+- `types_of_inheritance.py`: Single, Multilevel, Multiple (with Diamond problem & MRO), Hierarchical, and Hybrid inheritance.
+- `types_of_inheritance.md`: 10-section guide on all 5 inheritance types, C3 MRO linearization, and `super()`.
 - `class_and_objects.py`: Demonstrates class definitions, constructors, instance/class variables, and methods.
 - `encapsulation.py`: Data hiding, private attributes, name mangling, and properties (`@property`).
 - `abstraction.py`: Designing contracts with `ABC` and enforced abstract methods.

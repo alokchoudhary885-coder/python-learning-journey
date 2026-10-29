@@ -93,6 +93,8 @@ python-learning-journey/
 │   ├── oop_methods.py
 │   ├── variables_in_oop.md
 │   ├── variables_in_oop.py
+│   ├── types_of_inheritance.md
+│   ├── types_of_inheritance.py
 │   ├── class_and_objects.py
 │   ├── encapsulation.py
 │   ├── abstraction.py
