@@ -86,12 +86,14 @@ python-learning-journey/
 ├── Chapter 6 - Object-Oriented Programming (OOP)/
 │   ├── README.md
 │   ├── oop_advantages.md
+│   ├── oop_principles.md
+│   ├── constructors.md
+│   ├── constructors.py
 │   ├── class_and_objects.py
 │   ├── encapsulation.py
 │   ├── abstraction.py
 │   ├── inheritance.py
-│   ├── polymorphism.py
-│   └── oop_principles.md
+│   └── polymorphism.py
 └── Chapter 8 - NumPy/
     ├── README.md
     ├── numpy_introduction.md

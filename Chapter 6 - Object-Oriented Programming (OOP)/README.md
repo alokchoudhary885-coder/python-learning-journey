@@ -13,6 +13,8 @@ This chapter covers the foundations of Object-Oriented Programming (OOP): classe
 - Polymorphism: Method overriding, duck typing, and operator overloading
 
 ## Files in this Chapter
+- `constructors.py`: Default, non-parameterized, parameterized constructors, default values, and `self` memory proof.
+- `constructors.md`: 10-section study notes on constructors, types, lifecycle, and Q&A.
 - `class_and_objects.py`: Demonstrates class definitions, constructors, instance/class variables, and methods.
 - `encapsulation.py`: Data hiding, private attributes, name mangling, and properties (`@property`).
 - `abstraction.py`: Designing contracts with `ABC` and enforced abstract methods.
