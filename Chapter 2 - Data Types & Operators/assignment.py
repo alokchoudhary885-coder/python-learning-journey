@@ -1,3 +1,5 @@
+import sys
+
 # Chapter 2 - Assignment: Data Types and Operators
 # ===================================================
 # Problem 1: Smart Temperature Converter (Celsius to Fahrenheit & Kelvin)
@@ -5,10 +7,22 @@
 # Problem 3: Operator Precedence & Float Arithmetic Output Analysis
 # Problem 4: Keyword Correction
 
+def prompt_user(prompt_text, default_val):
+    if sys.stdin.isatty():
+        try:
+            val = input(prompt_text).strip()
+            return val if val else default_val
+        except (EOFError, KeyboardInterrupt):
+            return default_val
+    else:
+        print(f"{prompt_text}{default_val} (auto-selected)")
+        return default_val
+
+
 # --- Solution 1: Temperature Converter ---
 print("--- Problem 1: Temperature Converter ---")
-celsius_input = input("Enter temperature in Celsius (or press Enter for default 25): ")
-celsius = float(celsius_input) if celsius_input.strip() else 25.0
+celsius_str = prompt_user("Enter temperature in Celsius (or press Enter for default 25): ", "25")
+celsius = float(celsius_str)
 
 fahrenheit = (celsius * 9 / 5) + 32
 kelvin = celsius + 273.15
@@ -20,11 +34,11 @@ print("Kelvin:", kelvin)
 
 # --- Solution 2: Bill Split Calculator ---
 print("\n--- Problem 2: Bill Split Calculator ---")
-bill_input = input("Enter total bill (or press Enter for default 1200): ")
-friends_input = input("Enter number of friends (or press Enter for default 4): ")
+bill_str = prompt_user("Enter total bill (or press Enter for default 1200): ", "1200")
+friends_str = prompt_user("Enter number of friends (or press Enter for default 4): ", "4")
 
-total_bill = float(bill_input) if bill_input.strip() else 1200.0
-friends = int(friends_input) if friends_input.strip() else 4
+total_bill = float(bill_str)
+friends = int(friends_str)
 
 each_person = total_bill / friends
 

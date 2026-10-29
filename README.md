@@ -1,23 +1,14 @@
-# Python Learning Journey 🐍
+# Python Learning Journey 🚀
 
-Welcome to my personal Python learning repository! This project documents my journey from the absolute basics of Python to advanced programming concepts, building a solid foundation for Data Science and Machine Learning.
-
----
-
-## 🎯 Learning Objectives
-- Master Python programming from core syntax to clean modular architecture.
-- Write readable, well-structured, beginner-friendly Python code.
-- Understand foundational computer science concepts like memory, operators, and recursion.
-- Build consistent habits with Git and GitHub version control.
-- Prepare step-by-step for Data Structures, NumPy, Pandas, and Machine Learning.
+Welcome to my personal **Python Learning Journey** repository! This repository documents my step-by-step progress as I learn Python from the ground up — from basic syntax and core programming concepts to Object-Oriented Programming (OOP) and Data Science libraries.
 
 ---
 
-## 🛠️ Technologies & Tools
-- **Language:** Python 3.x
-- **Editor:** Visual Studio Code
-- **Version Control:** Git & GitHub
-- **Operating System:** Windows
+## 📌 About This Repository
+
+- **Author:** Alok Choudhary
+- **Objective:** Master Python programming through theory notes, practical code examples, and coding assignments.
+- **Learning Style:** Simple, beginner-friendly explanations with clean, readable code and proper documentation.
 
 ---
 
@@ -26,8 +17,8 @@ Welcome to my personal Python learning repository! This project documents my jou
 ```text
 python-learning-journey/
 ├── README.md
-├── .gitignore
 ├── requirements.txt
+├── run.py
 ├── Chapter 0 - Getting Started/
 │   ├── README.md
 │   ├── notes.md
@@ -38,8 +29,8 @@ python-learning-journey/
 │   ├── notes.md
 │   ├── 01_variables.py
 │   ├── comment.py
-│   ├── expressions_and_statements.py
 │   ├── indentation.py
+│   ├── expressions_and_statements.py
 │   ├── python-statements.py
 │   ├── practice.py
 │   └── assignment.py
@@ -48,47 +39,50 @@ python-learning-journey/
 │   ├── notes.md
 │   ├── practice.py
 │   └── assignment.py
-└── Chapter 4 - Functions/
-    ├── README.md
-    ├── notes.md
-    ├── map_function.md
-    ├── reduce_function.md
-    ├── why_not_lambda_everywhere.md
-    ├── modules_in_python.md
-    ├── random_module.md
-    ├── multiple_modules.md
-    ├── special_variables.md
-    ├── datetime_module.md
-    ├── datetime_classes.md
-    ├── calendar_module.md
-    ├── python_import_hierarchy.md
-    ├── module_aliasing.md
-    ├── practice.py
-    ├── types_of_arguments.py
-    ├── variable_scope.py
-    ├── function_aliasing.py
-    ├── nested_functions.py
-    ├── ternary_operator.py
-    ├── lambda_functions.py
-    ├── map_function.py
-    ├── reduce_function.py
-    ├── lambda_vs_def.py
-    ├── my_module.py
-    ├── main.py
-    ├── math_module_demo.py
-    ├── random_module_demo.py
-    ├── random_module_functions.py
-    ├── datetime_module_demo.py
-    ├── datetime_classes_demo.py
-    ├── calendar_module_demo.py
-    ├── import_hierarchy_demo.py
-    ├── module_aliasing.py
-    ├── arithmetic_module.py
-    ├── formatting_module.py
-    ├── multiple_modules_demo.py
-    ├── special_variables.py
-    ├── recursion.py
-    └── assignment.py
+├── Chapter 4 - Functions/
+│   ├── README.md
+│   ├── notes.md
+│   ├── map_function.md
+│   ├── reduce_function.md
+│   ├── why_not_lambda_everywhere.md
+│   ├── modules_in_python.md
+│   ├── multiple_modules.md
+│   ├── python_import_hierarchy.md
+│   ├── module_aliasing.md
+│   ├── special_variables.md
+│   ├── datetime_module.md
+│   ├── datetime_classes.md
+│   ├── calendar_module.md
+│   ├── random_module.md
+│   ├── types_of_arguments.py
+│   ├── variable_scope.py
+│   ├── nested_functions.py
+│   ├── lambda_functions.py
+│   ├── ternary_operator.py
+│   ├── function_aliasing.py
+│   ├── map_function.py
+│   ├── reduce_function.py
+│   ├── lambda_vs_def.py
+│   ├── my_module.py
+│   ├── main.py
+│   ├── math_module_demo.py
+│   ├── random_module_demo.py
+│   ├── random_module_functions.py
+│   ├── datetime_module_demo.py
+│   ├── datetime_classes_demo.py
+│   ├── calendar_module_demo.py
+│   ├── import_hierarchy_demo.py
+│   ├── module_aliasing.py
+│   ├── arithmetic_module.py
+│   ├── formatting_module.py
+│   ├── multiple_modules_demo.py
+│   ├── special_variables.py
+│   ├── recursion.py
+│   ├── pattern.py
+│   ├── dsa.py
+│   ├── OoPs.py
+│   ├── practice.py
+│   └── assignment.py
 ├── Chapter 6 - Object-Oriented Programming (OOP)/
 │   ├── README.md
 │   ├── oop_advantages.md
@@ -130,26 +124,44 @@ python-learning-journey/
 
 ---
 
-## 🚀 How to Run Code
+## 🚀 How to Run Code Easily in Terminal
 
-1. Clone or open this repository in VS Code or your terminal:
-   ```bash
-   git clone https://github.com/alokchoudhary885-coder/python-learning-journey.git
-   ```
-2. Navigate to any chapter folder:
-   ```bash
-   cd "Chapter 4 - Functions"
-   ```
-3. Run any Python script using the interpreter:
-   ```bash
-   python recursion.py
-   ```
+You can run files in this repository in **three easy ways**:
+
+### Method 1: Using the Universal Runner (Recommended) ⭐
+
+Simply run the universal runner script from the root directory:
+```bash
+python run.py
+```
+- **Interactive Menu:** Pick any chapter or file with a simple number.
+- **Search and Run:** `python run.py pattern` or `python run.py numpy` or `python run.py dsa`
+- **Run by Chapter:** `python run.py 4` or `python run.py 8`
+- **Run All 48 Files (Health Check):** `python run.py --all`
+
+### Method 2: Running Directly with Quotes (From Root)
+
+Since folder names contain spaces, wrap the path in quotes:
+```bash
+python "Chapter 4 - Functions/pattern.py"
+python "Chapter 4 - Functions/recursion.py"
+python "Chapter 8 - NumPy/two_dimensional_arrays.py"
+```
+
+### Method 3: Navigating into the Chapter Folder
+
+```bash
+cd "Chapter 4 - Functions"
+python recursion.py
+python map_function.py
+cd ..
+```
 
 ---
 
 ## 📖 How to Use the Notes & Practice
 
-- **`notes.md` in each chapter:** Follows a standard 8-section layout for quick exam revision and concept clarity (Definition, Syntax, Example, Output, Explanation, Important Points, Common Mistakes, and Practice Questions).
+- **`notes.md` in each chapter:** Follows a standard 8-to-10 section layout for quick exam revision and concept clarity.
 - **`practice.py`:** Contains working examples that can be modified and experimented with.
 - **`assignment.py`:** Exercises to test practical understanding of each concept.
 
@@ -158,4 +170,3 @@ python-learning-journey/
 ## 🌟 Future Goals
 - Complete core Python syntax and move on to Python data structures (Lists, Tuples, Dictionaries).
 - Build small hands-on console projects.
-- Transition into data analysis libraries (NumPy, Pandas).

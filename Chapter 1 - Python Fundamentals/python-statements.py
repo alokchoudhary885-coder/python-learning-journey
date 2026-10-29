@@ -1,3 +1,5 @@
+import sys
+
 # Python Statements
 # =================
 
@@ -17,7 +19,15 @@ print("Hello")
 
 
 # 3. Input Statement
-user_name = input("Enter your name: ")
+if sys.stdin.isatty():
+    try:
+        user_name = input("Enter your name (press Enter for 'Alok'): ").strip() or "Alok"
+    except (EOFError, KeyboardInterrupt):
+        user_name = "Alok"
+else:
+    user_name = "Alok"
+    print(f"Enter your name (press Enter for 'Alok'): {user_name} (auto-selected)")
+
 print("Hello", user_name)
 
 
