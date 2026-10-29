@@ -89,6 +89,8 @@ python-learning-journey/
 │   ├── oop_principles.md
 │   ├── constructors.md
 │   ├── constructors.py
+│   ├── oop_methods.md
+│   ├── oop_methods.py
 │   ├── class_and_objects.py
 │   ├── encapsulation.py
 │   ├── abstraction.py
