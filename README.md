@@ -87,6 +87,9 @@ python-learning-journey/
 │   ├── README.md
 │   ├── oop_advantages.md
 │   ├── oop_principles.md
+│   ├── instance_variables.md
+│   ├── instance_variables.py
+│   ├── student.py
 │   ├── constructors.md
 │   ├── constructors.py
 │   ├── oop_methods.md
