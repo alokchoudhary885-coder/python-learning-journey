@@ -16,6 +16,8 @@ This chapter covers the foundations of Object-Oriented Programming (OOP): classe
 - `student.py`: Quick student practice on setting, accessing, and deleting instance variables.
 - `instance_variables.py`: Complete guide to declaring (3 places), accessing (2 places), and deleting (2 places) instance variables.
 - `instance_variables.md`: 10-section study notes on instance variable lifecycle, `__dict__` namespaces, and Q&A.
+- `types_of_variables.py`: Detailed demo of Static, Instance, and Local variables + Why and when to use a single shared value.
+- `types_of_variables.md`: 10-section study notes on memory savings, data consistency, and decision flowchart.
 - `constructors.py`: Default, non-parameterized, parameterized constructors, default values, and `self` memory proof.
 - `constructors.md`: 10-section study notes on constructors, types, lifecycle, and Q&A.
 - `oop_methods.py`: Practical demonstration of Instance methods, Class methods (`@classmethod`), and Static methods (`@staticmethod`).

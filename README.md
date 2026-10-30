@@ -90,6 +90,8 @@ python-learning-journey/
 │   ├── instance_variables.md
 │   ├── instance_variables.py
 │   ├── student.py
+│   ├── types_of_variables.md
+│   ├── types_of_variables.py
 │   ├── constructors.md
 │   ├── constructors.py
 │   ├── oop_methods.md
