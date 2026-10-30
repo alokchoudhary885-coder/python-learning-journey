@@ -14,6 +14,7 @@ This chapter covers the foundations of Object-Oriented Programming (OOP): classe
 
 ## Files in this Chapter
 - `student.py`: Quick student practice on setting, accessing, and deleting instance variables.
+- `practice.py`: Hands-on practice exercises on variable declaration, single shared values, and deletion.
 - `instance_variables.py`: Complete guide to declaring (3 places), accessing (2 places), and deleting (2 places) instance variables.
 - `instance_variables.md`: 10-section study notes on instance variable lifecycle, `__dict__` namespaces, and Q&A.
 - `types_of_variables.py`: Detailed demo of Static, Instance, and Local variables + Why and when to use a single shared value.

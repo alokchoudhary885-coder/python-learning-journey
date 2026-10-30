@@ -92,6 +92,7 @@ python-learning-journey/
 │   ├── student.py
 │   ├── types_of_variables.md
 │   ├── types_of_variables.py
+│   ├── practice.py
 │   ├── constructors.md
 │   ├── constructors.py
 │   ├── oop_methods.md
