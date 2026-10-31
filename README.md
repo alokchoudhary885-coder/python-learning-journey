@@ -87,12 +87,16 @@ python-learning-journey/
 │   ├── README.md
 │   ├── oop_advantages.md
 │   ├── oop_principles.md
+│   ├── static_and_local_variables.md
+│   ├── static_vs_local_vs_instance.py
+│   ├── Staticvar.py
 │   ├── instance_variables.md
 │   ├── instance_variables.py
 │   ├── student.py
 │   ├── types_of_variables.md
 │   ├── types_of_variables.py
 │   ├── practice.py
+│   ├── assignment.py
 │   ├── constructors.md
 │   ├── constructors.py
 │   ├── oop_methods.md

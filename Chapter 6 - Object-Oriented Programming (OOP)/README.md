@@ -13,8 +13,12 @@ This chapter covers the foundations of Object-Oriented Programming (OOP): classe
 - Polymorphism: Method overriding, duck typing, and operator overloading
 
 ## Files in this Chapter
+- `Staticvar.py`: Classroom practice on static variable modifications and local variable scope isolation.
+- `static_vs_local_vs_instance.py`: Master demo covering 6 declaration places of static variables, accessing, shadowing traps, and local variable stack lifetimes.
+- `static_and_local_variables.md`: 10-section comprehensive study notes on Static, Instance, and Local variables with comparison tables and Q&A.
 - `student.py`: Quick student practice on setting, accessing, and deleting instance variables.
 - `practice.py`: Hands-on practice exercises on variable declaration, single shared values, and deletion.
+- `assignment.py`: 5 comprehensive assignment problems covering variable declaration locations, deletion, static memory optimization, and local variable scoping.
 - `instance_variables.py`: Complete guide to declaring (3 places), accessing (2 places), and deleting (2 places) instance variables.
 - `instance_variables.md`: 10-section study notes on instance variable lifecycle, `__dict__` namespaces, and Q&A.
 - `types_of_variables.py`: Detailed demo of Static, Instance, and Local variables + Why and when to use a single shared value.
