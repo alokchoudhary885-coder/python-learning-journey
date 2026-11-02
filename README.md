@@ -42,7 +42,9 @@ python-learning-journey/
 ├── Chapter 3 - Control Flow/
 │   ├── README.md
 │   ├── conditional_statements.md
-│   └── conditional_statements.py
+│   ├── conditional_statements.py
+│   ├── loops_and_iteration.md
+│   └── iterative_statements.py
 ├── Chapter 4 - Functions/
 │   ├── README.md
 │   ├── notes.md
