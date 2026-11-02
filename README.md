@@ -39,6 +39,10 @@ python-learning-journey/
 │   ├── notes.md
 │   ├── practice.py
 │   └── assignment.py
+├── Chapter 3 - Control Flow/
+│   ├── README.md
+│   ├── conditional_statements.md
+│   └── conditional_statements.py
 ├── Chapter 4 - Functions/
 │   ├── README.md
 │   ├── notes.md
@@ -127,7 +131,7 @@ python-learning-journey/
 - [x] **Chapter 0: Getting Started** (Installation, print statements, running scripts)
 - [x] **Chapter 1: Python Fundamentals** (Variables, comments, indentation, statements)
 - [x] **Chapter 2: Data Types & Operators** (Data types, type casting, arithmetic, logical operators)
-- [ ] **Chapter 3: Control Flow** (Conditionals, loops, loop control statements) — *Up Next*
+- [x] **Chapter 3: Control Flow** (Conditionals, loops, loop control statements)
 - [x] **Chapter 4: Functions, Functional Tools & Modules** (Arguments, scope, lambda, map, reduce, recursion, custom & standard modules, import hierarchy, aliasing)
 - [ ] **Chapter 5: Data Structures / Collections** (Lists, Tuples, Sets, Dictionaries)
 - [x] **Chapter 6: Object-Oriented Programming (OOP)** (Classes, objects, encapsulation, abstraction, inheritance, polymorphism)
