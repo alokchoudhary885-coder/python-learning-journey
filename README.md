@@ -92,7 +92,9 @@ python-learning-journey/
 ├── Chapter 5 - Data Structures/
 │   ├── README.md
 │   ├── lists_in_python.md
-│   └── list_operations.py
+│   ├── list_operations.py
+│   ├── tuples_in_python.md
+│   └── tuple_operations.py
 ├── Chapter 6 - Object-Oriented Programming (OOP)/
 │   ├── README.md
 │   ├── oop_advantages.md

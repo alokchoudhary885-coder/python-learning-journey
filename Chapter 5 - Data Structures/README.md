@@ -13,6 +13,8 @@ This chapter covers Python's built-in data structures (Lists, Tuples, Sets, and 
 ## Files in this Chapter
 - `list_operations.py`: Comprehensive runnable examples of indexing, slicing, methods, and comprehensions.
 - `lists_in_python.md`: 10-section study notes on Python Lists with methods tables, memory rules, and practice questions.
+- `tuple_operations.py`: Demonstration of tuple creation, immutability, packing/unpacking, and hashable keys.
+- `tuples_in_python.md`: 10-section study notes on Python Tuples, single-element comma trap, and list vs tuple comparison.
 
 ## How to Run
 ```bash
