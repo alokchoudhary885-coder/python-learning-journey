@@ -15,6 +15,8 @@ This chapter covers Python's built-in data structures (Lists, Tuples, Sets, and 
 - `lists_in_python.md`: 10-section study notes on Python Lists with methods tables, memory rules, and practice questions.
 - `tuple_operations.py`: Demonstration of tuple creation, immutability, packing/unpacking, and hashable keys.
 - `tuples_in_python.md`: 10-section study notes on Python Tuples, single-element comma trap, and list vs tuple comparison.
+- `dict_operations.py`: Dictionary operations, safe `.get()`, methods (`keys`, `values`, `items`, `update`), comprehensions, and nested JSON-like records.
+- `dictionaries_in_python.md`: 10-section study notes on Python Dictionaries, hash tables, $O(1)$ search, and methods reference.
 
 ## How to Run
 ```bash

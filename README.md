@@ -94,7 +94,9 @@ python-learning-journey/
 │   ├── lists_in_python.md
 │   ├── list_operations.py
 │   ├── tuples_in_python.md
-│   └── tuple_operations.py
+│   ├── tuple_operations.py
+│   ├── dictionaries_in_python.md
+│   └── dict_operations.py
 ├── Chapter 6 - Object-Oriented Programming (OOP)/
 │   ├── README.md
 │   ├── oop_advantages.md
@@ -141,7 +143,7 @@ python-learning-journey/
 - [x] **Chapter 2: Data Types & Operators** (Data types, type casting, arithmetic, logical operators)
 - [x] **Chapter 3: Control Flow** (Conditionals, loops, loop control statements)
 - [x] **Chapter 4: Functions, Functional Tools & Modules** (Arguments, scope, lambda, map, reduce, recursion, custom & standard modules, import hierarchy, aliasing)
-- [x] **Chapter 5: Data Structures / Collections** (Lists, indexing, slicing, methods, comprehensions)
+- [x] **Chapter 5: Data Structures / Collections** (Lists, Tuples, Dictionaries, indexing, slicing, methods, comprehensions)
 - [x] **Chapter 6: Object-Oriented Programming (OOP)** (Classes, objects, encapsulation, abstraction, inheritance, polymorphism)
 - [ ] **Chapter 7: File Handling & Exception Handling**
 
