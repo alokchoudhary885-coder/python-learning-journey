@@ -126,6 +126,10 @@ python-learning-journey/
 │   ├── abstraction.py
 │   ├── inheritance.py
 │   └── polymorphism.py
+├── Chapter 7 - File Handling & Exception Handling/
+│   ├── README.md
+│   ├── exception_handling.md
+│   └── exception_handling.py
 └── Chapter 8 - NumPy/
     ├── README.md
     ├── numpy_introduction.md
@@ -147,7 +151,7 @@ python-learning-journey/
 - [x] **Chapter 4: Functions, Functional Tools & Modules** (Arguments, scope, lambda, map, reduce, recursion, custom & standard modules, import hierarchy, aliasing)
 - [x] **Chapter 5: Data Structures / Collections** (Lists, Tuples, Sets, Dictionaries, comprehensions)
 - [x] **Chapter 6: Object-Oriented Programming (OOP)** (Classes, objects, encapsulation, abstraction, inheritance, polymorphism)
-- [ ] **Chapter 7: File Handling & Exception Handling**
+- [x] **Chapter 7: File Handling & Exception Handling** (try-except-else-finally, raise, custom exceptions)
 
 ### Data Science & Beyond
 - [x] **Chapter 8: NumPy** (Array creation, zeros, ones, arange, linspace, logspace, 2D arrays, shapes)
